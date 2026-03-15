@@ -5,8 +5,8 @@ Ghostty + Starship + Claude Code development environment.
 ## Quick Setup (New Machine)
 
 ```bash
-git clone https://github.com/coderhzy/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/coderhzy/ghostty-dotfiles.git ~/ghostty-dotfiles
+cd ~/ghostty-dotfiles
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -29,12 +29,16 @@ chmod +x setup.sh
 | `Cmd + Shift + T` | Rename tab |
 | `Cmd + Shift + ,` | Reload config |
 
+## Auto Sync
+
+GitHub Action runs daily at 16:00 (Beijing time) to check for upstream [BruceBlue config](https://github.com/BruceLanLan/bruceblue-ghostty-config) updates. Changes are saved to `ghostty/upstream-bruceblue.config` for review.
+
 ## Update Configs
 
 After modifying local configs:
 
 ```bash
-cd ~/dotfiles
+cd ~/ghostty-dotfiles
 ./update.sh
 git add -A && git commit -m "update: sync configs"
 git push
